@@ -1,1 +1,2 @@
 # Mobile-Robotics
+Here, I present implementations of some fundamental algorithms which are pretty handy in the field of mobile robotics. I learned these algorithms through the NAV 568 course taught at the University of Michigan.
