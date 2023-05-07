@@ -1,5 +1,6 @@
 # Bayes filter 
 Here is a implementation of Bayes filter in a 1D circular grid world, with visualizations of prior belief, likelihood map, control sequence, & the posterior beliefs after each step.
+![Screenshot](img/bf_algo.jpg)
 ![Screenshot](img/belief_likelihood_control.png)
 ![Screenshot](img/step1.png)
 ![Screenshot](img/step2.png)
