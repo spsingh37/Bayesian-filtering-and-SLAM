@@ -99,6 +99,7 @@ if __name__ == "__main__":
                      color=green, alpha=0.3, linewidth=1.5)
 
     ###### Simulate noisy odometry measurements ######
+    np.random.seed(0)
     sigma_ux = 0.2
     sigma_uy = 0.2
     sigma_u = np.diag(np.power([sigma_ux, sigma_uy], 2))
@@ -185,42 +186,44 @@ if __name__ == "__main__":
     print(r'norm(A \ b - R \ Q^T * b) = ', np.linalg.norm(x_slam - x_qr))
     print(r'norm(A \ b - L^T \ (L \ A^T * b)) = ', np.linalg.norm(x_slam - x_chol))
 
-
+    # RMSE x: 0.0337
+    # RMSE y: 0.0337
     ###### Plot results ######
     # SLAM trajectory
     x_slam_pose = x_slam[0:nr*pose_number]
     plt.plot(x_slam_pose[0::2], x_slam_pose[1::2], '-', color=darkblue, alpha=0.7, linewidth=2, label='SLAM')
     plt.plot(x_slam_pose[0::2], x_slam_pose[1::2], '.', color=darkblue, alpha=0.7, markersize=18)
+    
     # SLAM map
     plt.plot(x_slam[nr*pose_number::2], x_slam[nr*pose_number+1::2], '*', color=darkblue, alpha=0.7, markersize=14)
     plt.legend(loc='best')
     plt.show()
 
     # spy matrix
-    fig2 = plt.figure(figsize=(12, 12))
+    fig2 = plt.figure(figsize=(16, 16))
 
-    plt.subplot(221)
+    plt.subplot(141)
     ax1 = plt.gca()
     ax1.set_title(r'$A$')
     ax1.spy(A, markersize=5, color=Darkgrey, origin='lower', aspect='equal')
     label1 = 'nz = ' + str(len(np.nonzero(A.reshape(-1))[0]))
     ax1.set_xlabel(label1, fontweight='bold')
 
-    plt.subplot(222)
+    plt.subplot(142)
     ax2 = plt.gca()
     ax2.set_title(r'$A^\mathsf{T}A$')
     ax2.spy(np.dot(A.T, A), markersize=5, color=Darkgrey)
     label2 = 'nz = ' + str(len(np.nonzero(np.dot(A.T, A).reshape(-1))[0]))
     ax2.set_xlabel(label2, fontweight='bold')
 
-    plt.subplot(223)
+    plt.subplot(143)
     ax3 = plt.gca()
     ax3.set_title(r'$\mathsf{R}-QR$')
     ax3.spy(R[0:A.shape[1], :], markersize=5, color=darkblue)
     label3 = 'nz = ' + str(len(np.nonzero(R[0:A.shape[1], :].reshape(-1))[0]))
     ax3.set_xlabel(label3, fontweight='bold')
 
-    plt.subplot(224)
+    plt.subplot(144)
     ax4 = plt.gca()
     ax4.set_title(r'$\mathsf{R}-Cholesky$')
     ax4.spy(L.T, markersize=5, color=VermillionRed)
