@@ -4,10 +4,10 @@ sys.path.append('.')
 from os import stat
 import numpy as np
 from numpy.random import default_rng
-rng = default_rng()
+rng = default_rng(0)
 from utils.utils import wrap2Pi
 from world.world2d import world2d
-
+np.random.seed(0)
 def prediction(state, motion):
     x = state[0]
     y = state[1]

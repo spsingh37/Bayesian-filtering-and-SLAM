@@ -2,8 +2,8 @@
 import numpy as np
 from functools import partial
 from numpy.random import default_rng
-rng = default_rng()
-
+rng = default_rng(0)
+np.random.seed(0)
 class myStruct:
     pass
 

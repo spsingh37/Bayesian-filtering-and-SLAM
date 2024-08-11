@@ -18,9 +18,9 @@ class DataHandler:
         initialStateMean = [180,50,0]
         initialStateCov = np.eye(3)
 
-        alphas = np.array([0.00025,0.00005,0.0025,0.0005,0.0025,0.0005])**2
-
-        beta = 5/180*np.pi
+        # alphas = np.array([0.00025,0.00005,0.0025,0.0005,0.0025,0.0005])**2
+        alphas = np.array([0.000025,0.000005,0.00025,0.00005,0.00025,0.00005])**2
+        beta = 2.5/180*np.pi
 
         
         numSteps = 100

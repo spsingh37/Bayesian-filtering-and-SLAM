@@ -99,7 +99,7 @@ class RobotSystem:
             
             # publisher 
             self.pub.publish_pose(self.state_)
-            # self.pub.publish_path(self.state_)
+            self.pub.publish_state_path(self.state_)
 
             
             self.gt_pub.publish_gt_path(self.data['actual_state'][t])

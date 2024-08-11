@@ -11,7 +11,8 @@ from utils.utils import wrap2Pi
 
 from scipy.stats import multivariate_normal
 from numpy.random import default_rng
-rng = default_rng()
+np.random.seed(0)
+rng = default_rng(0)
 
 # Unscented transform class for uncertainty
 # Unscented Kalman filter class for state estimation of a nonlinear system

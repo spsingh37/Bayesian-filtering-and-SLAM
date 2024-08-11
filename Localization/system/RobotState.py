@@ -6,7 +6,7 @@ from scipy.spatial.transform import Rotation
 import yaml
 
 from utils.utils import *
-
+np.random.seed(0)
 class RobotState:
     '''
     Robot State:
@@ -24,7 +24,6 @@ class RobotState:
         self.world_dim = param["world_dimension"]
         self.filter_name = param["filter_name"]
         self.Lie2Cart = param['Lie2Cart']
-
         if time_stamp is not None:
             self.time_stamp_ = time_stamp
         else:
