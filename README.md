@@ -84,21 +84,21 @@ This repository encompasses several critical components of autonomous robotic sy
 <table align="center">
   <tr>
     <td align="center">
-      <figcaption>Kalman Filter (KF)</figcaption>
+      <figcaption>Kalman Filter (KF) - RMSE: 0.1040 m</figcaption>
       <img src="assets/kf_results.png" alt="KF" width="400" />
     </td>
     <td align="center">
-      <figcaption>Extended Kalman Filter (EKF)</figcaption>
+      <figcaption>Extended Kalman Filter (EKF) - RMSE: 0.0854 m</figcaption>
       <img src="assets/ekf_results.png" alt="EKF" width="400" />
     </td>
   </tr>
   <tr>
     <td align="center">
-      <figcaption>Unscented Kalman Filter (UKF)</figcaption>
+      <figcaption>Unscented Kalman Filter (UKF) - RMSE: 0.0754 m</figcaption>
       <img src="assets/ukf_results.png" alt="UKF" width="400" />
     </td>
     <td align="center">
-      <figcaption>Particle Filter (PF)</figcaption>
+      <figcaption>Particle Filter (PF) - RMSE: 0.05 m</figcaption>
       <img src="assets/pf_results.png" alt="PF" width="400" />
     </td>
   </tr>
@@ -127,13 +127,38 @@ This repository encompasses several critical components of autonomous robotic sy
       <img style="width:100%" src="assets/riekf_localization_gif.gif">
 </div>
 
-#### With landmarks outside the field
+<!-- #### With landmarks outside the field
 <p align="center">
   <img src="assets/ekf_localization_gif.gif" alt="EKF" width="400" />
   <img src="assets/ukf_localization_gif.gif" alt="UKF" width="400" />
   <img src="assets/pf_localization_gif.gif" alt="PF" width="400" />
   <img src="assets/inekf_localization_gif.gif" alt="InEKF" width="400" />
-</p>
+</p> -->
+#### With landmarks outside the field
+- Note: In this figure, `green path` represents command path without action noise, which is the path we want our robot to follow. `blue path` represents the exact path that the robot moves due to action noise. The 'pink path' is the filter corrected path, which is the best estimate of where the robot actually is. The `red ellipse` and the `red arrow` represent the filter prediction pose for the robot.
+<table align="center">
+  <tr>
+    <td align="center">
+      <figcaption>Extended Kalman Filter (EKF)</figcaption>
+      <img src="assets/ekf_localization_gif.gif" alt="EKF" width="400" />
+    </td>
+    <td align="center">
+      <figcaption>Unscented Kalman Filter (UKF)</figcaption>
+      <img src="assets/ukf_localization_gif.gif" alt="UKF" width="400" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <figcaption>Particle Filter (PF)</figcaption>
+      <img src="assets/pf_localization_gif.gif" alt="PF" width="400" />
+    </td>
+    <td align="center">
+      <figcaption>Invariant Extended Kalman Filter (InEKF)</figcaption>
+      <img src="assets/inekf_localization_gif.gif" alt="InEKF" width="400" />
+    </td>
+  </tr>
+</table>
+
 
 ### 📈 Simultaneous Localization & Mapping (SLAM)
 #### EKF-based SLAM, and Least Squares SLAM:
