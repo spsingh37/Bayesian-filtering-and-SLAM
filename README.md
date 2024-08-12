@@ -82,21 +82,21 @@ This repository encompasses several critical components of autonomous robotic sy
 </p> -->
 - 2D Aircraft tracking
 <p align="center">
-  <figure style="display: inline-block; margin: 10px;">
+  <figure style="display: inline-block; margin: 0px;">
+    <figcaption style="text-align: center;">Kalman Filter (KF)</figcaption>
     <img src="assets/kf_results.png" alt="KF" width="400" />
-    <figcaption>Kalman Filter (KF)</figcaption>
   </figure>
-  <figure style="display: inline-block; margin: 10px;">
+  <figure style="display: inline-block; margin: 0px;">
+    <figcaption style="text-align: center;">Extended Kalman Filter (EKF)</figcaption>
     <img src="assets/ekf_results.png" alt="EKF" width="400" />
-    <figcaption>Extended Kalman Filter (EKF)</figcaption>
   </figure>
-  <figure style="display: inline-block; margin: 10px;">
+  <figure style="display: inline-block; margin: 0px;">
+    <figcaption style="text-align: center;">Unscented Kalman Filter (UKF)</figcaption>
     <img src="assets/ukf_results.png" alt="UKF" width="400" />
-    <figcaption>Unscented Kalman Filter (UKF)</figcaption>
   </figure>
-  <figure style="display: inline-block; margin: 10px;">
+  <figure style="display: inline-block; margin: 0px;">
+    <figcaption style="text-align: center;">Particle Filter (PF)</figcaption>
     <img src="assets/pf_results.png" alt="PF" width="400" />
-    <figcaption>Particle Filter (PF)</figcaption>
   </figure>
 </p>
 
