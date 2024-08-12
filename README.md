@@ -123,6 +123,7 @@ This repository encompasses several critical components of autonomous robotic sy
 
 ### 📈 Robot Localization
 #### With landmarks inside the field
+- Using Right-Invariant EKF
 <div style="width: 100%; text-align: center; margin:auto;">
       <img style="width:100%" src="assets/riekf_localization_gif.gif">
 </div>
