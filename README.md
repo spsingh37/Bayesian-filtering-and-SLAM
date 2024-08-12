@@ -73,12 +73,31 @@ This repository encompasses several critical components of autonomous robotic sy
       <img style="width:100%" src="assets/bayes_filter_gif.gif">
 </div>
 
-- 2D Aircraft tracking
+<!-- - 2D Aircraft tracking
 <p align="center">
   <img src="assets/kf_results.png" alt="KF" width="400" />
   <img src="assets/ekf_results.png" alt="EKF" width="400" />
   <img src="assets/ukf_results.png" alt="UKF" width="400" />
   <img src="assets/pf_results.png" alt="PF" width="400" />
+</p> -->
+- 2D Aircraft tracking
+<p align="center">
+  <figure style="display: inline-block; margin: 10px;">
+    <img src="assets/kf_results.png" alt="KF" width="400" />
+    <figcaption>Kalman Filter (KF)</figcaption>
+  </figure>
+  <figure style="display: inline-block; margin: 10px;">
+    <img src="assets/ekf_results.png" alt="EKF" width="400" />
+    <figcaption>Extended Kalman Filter (EKF)</figcaption>
+  </figure>
+  <figure style="display: inline-block; margin: 10px;">
+    <img src="assets/ukf_results.png" alt="UKF" width="400" />
+    <figcaption>Unscented Kalman Filter (UKF)</figcaption>
+  </figure>
+  <figure style="display: inline-block; margin: 10px;">
+    <img src="assets/pf_results.png" alt="PF" width="400" />
+    <figcaption>Particle Filter (PF)</figcaption>
+  </figure>
 </p>
 
 #### Camera-based tracking of an object in 3D space 
